@@ -15,6 +15,7 @@ const features = [
     icon: "fa-solid:star-of-life",
   },
 ];
+const src = '/img/hero_shape.svg'
 </script>
 
 <template>
@@ -30,14 +31,14 @@ const features = [
         <div :class="['relative flex justify-around items-center', {'lg:order-1': index % 2 === 0 }]">
           <img
             :class="['absolute md:block hidden top-[20%]', index % 2 ? 'left-[50%]' : 'right-[50%]']"
-            :src="`/_nuxt/assets/img/feature_${item.name}_shape.svg`"
+            :src="`/img/feature_${item.name}_shape.svg`"
             alt="feature shape"
             width="246"
             height="246"
           />
           <img
             class="drop-shadow-[0_35px_35px_rgba(0,0,0,0.5)]"
-            :src="`/_nuxt/assets/img/feature_${item.name}_smartphone.png`"
+            :src="`/img/feature_${item.name}_smartphone.png`"
             alt="feature smartphone"
             width="232"
             height="503"

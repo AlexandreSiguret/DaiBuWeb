@@ -7,7 +7,7 @@ import { items } from '../nav.ts'
     <header class="bg-white flex justify-between items-center my-8 p-2 rounded-xl border-2 border-[#95E3B7]">
       <NuxtLink href="/" class="flex items-center justify-between text-lg flex gap-2">
         <img
-          src="~/assets/img/logo.svg"
+          src="/img/logo.svg"
           alt="Logo"
           loading="eager"
           width="28"

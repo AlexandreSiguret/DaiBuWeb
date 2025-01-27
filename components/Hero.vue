@@ -14,14 +14,14 @@
     <div class="p-12 md:p-24 relative flex items-center">
       <img
         class="absolute left-0 md:block hidden"
-        src="~/assets/img/hero_shape.svg"
+        src="/img/hero_shape.svg"
         alt="hero shape"
         width="217.5"
         height="238"
       />
       <img
         class="drop-shadow-[0_35px_35px_rgba(0,0,0,0.5)]"
-        src="~/assets/img/hero_smartphone.png"
+        src="/img/hero_smartphone.png"
         alt="hero smartphone"
         width="304"
         height="673"
