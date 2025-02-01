@@ -7,7 +7,7 @@ const questions = [
   },
   {
     question: 'Mes données sont-elles sécurisées ?',
-    answer: "Toutes vos données sont chiffrées et stockées de manière sécurisée.",
+    answer: "Toutes vos données sont chiffrées et stockées localement de manière sécurisée.",
     greenBox: false 
   },
   {
@@ -22,7 +22,7 @@ const questions = [
   },
   {
     question: 'Y a-t-il un support client en cas de problème ?',
-    answer: `Oui, notre équipe est joignable via l’option "Support" dans les paramètres.`,
+    answer: `Oui, notre équipe est joignable via contact@daibu.fr.`,
     greenBox: true 
   },
   {
