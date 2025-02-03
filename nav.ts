@@ -11,7 +11,7 @@ export const items = [
 
 export const footerItems = [...items,
     {
-        title: "CGUS",
-        path: "#cgus",
+        title: "Privacy",
+        path: "privacy",
     },
 ];
