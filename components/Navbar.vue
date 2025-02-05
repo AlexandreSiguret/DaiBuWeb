@@ -31,6 +31,7 @@ import { items } from '../nav.ts'
       </nav>
       <div class="flex items-center gap-4">
         <CTA/>
+        
       </div>
     </header>
   </Container>
