@@ -1,5 +1,5 @@
-<template>
-    <section class="privacy-policy">
+  <template>
+    <section class="privacy-policy text-white">
       <h1>Politique de Confidentialité</h1>
       <p>Date de dernière mise à jour : <strong>03/02/2025</strong></p>
   

@@ -24,7 +24,7 @@ function resetTilt() {
 <template>
   <main class="grid lg:grid-cols-2 place-items-center pt-8 pb-6 md:pt-4 text-white">
     <div class="md:pl-24 max-md:text-center">
-      <h1 class="text-4xl lg:text-6xl xl:text-7xl font-extrabold lg:tracking-tight reveal-up reveal-up-1">
+      <h1 class="text-5xl lg:text-6xl xl:text-7xl font-extrabold lg:tracking-tight reveal-up reveal-up-1">
         <span class="bg-clip-text text-transparent bg-gradient-to-br from-white to-[#DFF6EC] shimmer-text">
           Un budget pour chaque jour
         </span>

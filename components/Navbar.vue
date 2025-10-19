@@ -1,5 +1,9 @@
 <script setup>
 import { items } from '../nav.ts'
+import { computed } from 'vue'
+
+const route = useRoute()
+const navItems = computed(() => route.path === '/privacy' ? [] : items)
 </script>
 
 <template>
@@ -19,7 +23,7 @@ import { items } from '../nav.ts'
         class="flex sm:block hidden"
       >
         <ul class="flex gap-3">
-          <li v-for="item of items">
+          <li v-for="item of navItems">
             <NuxtLink
               :href="item.path"
               class="flex px-3 py-2 text-white/70 hover:text-white"

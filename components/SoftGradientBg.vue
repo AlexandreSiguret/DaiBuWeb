@@ -1,21 +1,22 @@
 <script setup lang="ts">
 import { onMounted, onBeforeUnmount, ref } from 'vue'
 
-const blob1 = ref<HTMLDivElement | null>(null)
-const blob2 = ref<HTMLDivElement | null>(null)
-const blob3 = ref<HTMLDivElement | null>(null)
+// Wrappers parallax pour séparer transform (parallax) et animate-aurora (transform interne)
+const wrap1 = ref<HTMLDivElement | null>(null)
+const wrap2 = ref<HTMLDivElement | null>(null)
+const wrap3 = ref<HTMLDivElement | null>(null)
 
 let rafId: number | null = null
 
 function updateParallax() {
   const y = window.scrollY || 0
-  // Facteurs différents pour un effet de profondeur
+  // Facteurs différents pour un effet de profondeur (accentués)
   const y1 = y * 0.22
   const y2 = y * -0.16
   const y3 = y * 0.12
-  if (blob1.value) blob1.value.style.setProperty('translate', `0 ${y1}px`)
-  if (blob2.value) blob2.value.style.setProperty('translate', `0 ${y2}px`)
-  if (blob3.value) blob3.value.style.setProperty('translate', `0 ${y3}px`)
+  if (wrap1.value) wrap1.value.style.transform = `translate3d(0, ${y1}px, 0)`
+  if (wrap2.value) wrap2.value.style.transform = `translate3d(0, ${y2}px, 0)`
+  if (wrap3.value) wrap3.value.style.transform = `translate3d(0, ${y3}px, 0)`
 }
 
 function onScroll() {
@@ -42,10 +43,16 @@ onBeforeUnmount(() => {
     <div class="absolute inset-0 bg-soft-radial"></div>
     <!-- voile vertical doux -->
     <div class="absolute inset-0 bg-gradient-to-b from-transparent to-[rgba(15,17,21,0.20)]"></div>
-    <!-- aurora blobs (parallax via propriété CSS translate) -->
-    <div ref="blob1" class="absolute -top-24 -left-24 w-[380px] h-[380px] rounded-full bg-accent/30 blur-3xl animate-aurora will-change-transform"></div>
-    <div ref="blob2" class="absolute top-20 right-0 w-[300px] h-[300px] rounded-full bg-daiblue/25 blur-3xl animate-aurora-slow will-change-transform"></div>
-    <div ref="blob3" class="absolute bottom-0 left-1/3 w-[340px] h-[340px] rounded-full bg-[#95E3B7]/20 blur-3xl animate-aurora will-change-transform"></div>
+    <!-- aurora blobs: wrapper (parallax) + inner (aurora animation) -->
+    <div ref="wrap1" class="absolute -top-24 -left-24 will-change-transform">
+      <div class="w-[380px] h-[380px] rounded-full bg-accent/30 blur-3xl animate-aurora"></div>
+    </div>
+    <div ref="wrap2" class="absolute top-20 right-0 will-change-transform">
+      <div class="w-[300px] h-[300px] rounded-full bg-daiblue/25 blur-3xl animate-aurora-slow"></div>
+    </div>
+    <div ref="wrap3" class="absolute bottom-0 left-1/3 will-change-transform">
+      <div class="w-[340px] h-[340px] rounded-full bg-[#95E3B7]/20 blur-3xl animate-aurora"></div>
+    </div>
   </div>
 </template>
 
