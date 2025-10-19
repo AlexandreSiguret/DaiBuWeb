@@ -37,11 +37,6 @@ function resetTilt() {
       </div>
     </div>
     <div class="p-8 md:p-16 relative flex items-center reveal-up reveal-up-4">
-      <!-- halo doux derrière le smartphone -->
-      <div class="absolute inset-0 -z-10">
-        <div class="absolute left-1/4 top-1/4 w-72 h-72 rounded-full bg-daiblue/20 blur-3xl animate-glow"></div>
-        <div class="absolute right-0 bottom-0 w-80 h-80 rounded-full bg-accent/20 blur-3xl animate-glow"></div>
-      </div>
       <img
         class="absolute left-0 md:block hidden opacity-60"
         src="/img/hero_shape.svg"
