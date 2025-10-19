@@ -19,7 +19,7 @@ const src = '/img/hero_shape.svg'
 </script>
 
 <template>
-  <section id="features" class="bg-[#3A473F] text-white py-20">
+  <section id="features" class="py-20 text-white">
     <div class="max-w-screen-xl mx-auto px-5 grid gap-20">
       <SectionTitle dark>
         <template #name>
@@ -30,28 +30,28 @@ const src = '/img/hero_shape.svg'
       <div v-for="(item, index) of features" class="flex flex-col lg:flex-row w-full justify-between xl:justify-around items-center gap-6 lg:gap-12">
         <div :class="['relative flex justify-around items-center', {'lg:order-1': index % 2 === 0 }]">
           <img
-            :class="['absolute md:block hidden top-[20%]', index % 2 ? 'left-[50%]' : 'right-[50%]']"
+            :class="['absolute md:block hidden top-[20%] opacity-60', index % 2 ? 'left-[50%]' : 'right-[50%]']"
             :src="`/img/feature_${item.name}_shape.svg`"
             alt="feature shape"
             width="246"
             height="246"
           />
           <img
-            class="drop-shadow-[0_35px_35px_rgba(0,0,0,0.5)]"
+            class="drop-shadow-[0_35px_35px_rgba(0,0,0,0.5)] animate-float"
             :src="`/img/feature_${item.name}_smartphone.png`"
             alt="feature smartphone"
             width="232"
             height="503"
           />
         </div>
-        <div class="h-fit grid gap-6 max-w-xl ">
+        <div class="h-fit grid gap-6 max-w-xl glass p-6">
           <div class="flex justify-center lg:justify-start items-center gap-4">
-            <div class="bg-[#95E3B7] rounded-full p-3 shrink-0">
+            <div class="bg-accent rounded-full p-3 shrink-0">
               <Icon class="text-white text-2xl" :name="item.icon" />
             </div>
-            <h3 class="font-medium text-3xl">{{ item.title }}</h3>
+            <h3 class="font-extrabold text-3xl">{{ item.title }}</h3>
           </div>
-          <p class="text-white text-md lg:text-lg text-center lg:text-left opacity-50 leading-relaxed">
+          <p class="text-white text-md lg:text-lg text-center lg:text-left opacity-80 leading-relaxed">
             {{ item.description }}
           </p>
         </div>

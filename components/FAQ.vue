@@ -27,7 +27,7 @@ const questions = [
   },
   {
     question: 'L’application est-elle disponible hors ligne ?',
-    answer: "Oui, la plupart des fonctionnalités sont accessibles sans connexion Internet.",
+    answer: "Oui, toutes les fonctionnalités sont accessibles sans connexion Internet.",
     greenBox: false
   },
 ];
@@ -39,8 +39,8 @@ function getColorClasses(index: number) {
 </script>
 
 <template>
-  <section id="faq" class="max-w-screen-xl mx-auto px-5 grid gap-20 py-20">
-    <SectionTitle>
+  <section id="faq" class="max-w-screen-xl mx-auto px-5 grid gap-20 py-20 text-white">
+    <SectionTitle :dark="true">
       <template #name>
         Faq
       </template>
@@ -49,11 +49,10 @@ function getColorClasses(index: number) {
     <div class="grid grid-flow-col grid-rows-6 lg:grid-rows-3 gap-4">
       <div
         v-for="(item, index) of questions"
-        class="p-4 lg:p-8 rounded-lg grid gap-2 text-center lg:text-left"
-        :class="getColorClasses(index)"
+        class="p-4 lg:p-8 rounded-lg grid gap-2 text-center lg:text-left glass"
       >
-        <h3 class="font-semibold text-2xl lg:text-3xl">{{ item.question }}</h3>
-        <p class="text-md lg:text-lg opacity-50 leading-relaxed">
+        <h3 class="font-extrabold text-2xl lg:text-3xl">{{ item.question }}</h3>
+        <p class="text-md lg:text-lg opacity-80 leading-relaxed">
           {{ item.answer }}
         </p>
       </div>

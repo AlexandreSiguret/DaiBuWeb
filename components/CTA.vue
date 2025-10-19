@@ -30,7 +30,7 @@ function closeModal() {
     <!-- Bouton qui ouvre la modal -->
     <button
       :class="[
-        'rounded font-bold text-center text-white bg-[#95E3B7] rounded-lg px-4 py-2 hover:bg-[#8ad4aa]',
+        'rounded font-bold text-center text-darkbg bg-accent rounded-lg px-4 py-2 hover:opacity-90',
         { 'lg:text-3xl lg:px-10 lg:py-4': props.size === 'xl' }
       ]"
       @click="openModal"
@@ -39,21 +39,23 @@ function closeModal() {
     </button>
 
     <!-- Modal -->
-    <div v-if="showModal" class="modal-overlay" @click.self="closeModal">
-      <div class="modal-content">
-        <!-- Logo centré -->
-        <img src="/img/logo.svg" alt="Logo" class="logo" />
-        <!-- Conteneur des CTA centrés -->
-        <div class="cta-container">
-          <div class="cta-item">
-            <CTAIOS />
-          </div>
-          <div class="cta-item">
-            <CTAANDROID />
+    <Teleport to="body">
+      <div v-if="showModal" class="modal-overlay" @click.self="closeModal">
+        <div class="modal-content glass">
+          <!-- Logo centré -->
+          <img src="/img/logo.svg" alt="Logo" class="logo" />
+          <!-- Conteneur des CTA centrés -->
+          <div class="cta-container">
+            <div class="cta-item">
+              <CTAIOS />
+            </div>
+            <div class="cta-item">
+              <CTAANDROID />
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </Teleport>
   </div>
 </template>
 
@@ -73,23 +75,10 @@ function closeModal() {
 }
 
 /* Style pour le contenu de la modal */
-.modal-content {
-  background: #fff;
-  padding: 2rem;
-  border-radius: 8px;
-  position: relative;
-  max-width: 90%;
-  width: 400px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+.modal-content { padding: 2rem; border-radius: 16px; position: relative; max-width: 90%; width: 400px; display: flex; flex-direction: column; align-items: center; }
 
 /* Style pour le logo */
-.logo {
-  max-width: 150px;
-  margin-bottom: 1.5rem;
-}
+.logo { max-width: 150px; margin-bottom: 1.5rem; filter: drop-shadow(0 8px 24px rgba(0,0,0,0.25)); }
 
 /* Mise en forme pour que chaque CTA soit sur une ligne différente et centrée */
 .cta-container {
