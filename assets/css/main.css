@@ -10,3 +10,46 @@
     @apply bg-white/10 backdrop-blur-xl border border-white/10 rounded-2xl;
   }
 }
+
+/* WOW animations and utilities */
+@layer utilities {
+  .animate-aurora {
+    animation: auroraMove 18s ease-in-out infinite alternate;
+  }
+  .animate-aurora-slow {
+    animation: auroraMove 28s ease-in-out infinite alternate;
+  }
+  .reveal-up {
+    opacity: 0;
+    transform: translateY(16px) scale(0.98);
+    animation: revealUp 700ms ease forwards;
+  }
+  .reveal-up-1 { animation-delay: 100ms; }
+  .reveal-up-2 { animation-delay: 250ms; }
+  .reveal-up-3 { animation-delay: 400ms; }
+  .reveal-up-4 { animation-delay: 550ms; }
+
+  .shimmer-text {
+    background: linear-gradient(120deg, rgba(255,255,255,0.85) 20%, rgba(255,255,255,0.35) 40%, rgba(255,255,255,0.9) 60%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: shimmer 2200ms ease-in-out 1 both;
+  }
+}
+
+@keyframes revealUp {
+  0% { opacity: 0; transform: translateY(16px) scale(0.98); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
+@keyframes auroraMove {
+  0% { transform: translate(0, 0) scale(1); filter: blur(80px); }
+  50% { transform: translate(20px, -30px) scale(1.1); filter: blur(90px); }
+  100% { transform: translate(-20px, 30px) scale(1); filter: blur(80px); }
+}
