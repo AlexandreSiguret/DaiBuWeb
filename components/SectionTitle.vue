@@ -14,7 +14,7 @@ withDefaults(defineProps<Props>(), {
       <slot name="name"></slot>
     </p>
     <h2
-      :class="['text-3xl lg:text-5xl font-bold lg:tracking-tight capitalize']"
+      :class="['text-3xl lg:text-5xl font-bold lg:tracking-tight']"
     >
       <span
         :class="[

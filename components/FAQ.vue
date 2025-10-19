@@ -11,7 +11,7 @@ const questions = [
     greenBox: false 
   },
   {
-    question: 'Cette application est gratuite ?',
+    question: 'L\'application est-elle gratuite ?',
     answer: "Oui, l’application est téléchargeable gratuitement avec des fonctionnalités premium optionnelles.",
     greenBox: false 
   },
