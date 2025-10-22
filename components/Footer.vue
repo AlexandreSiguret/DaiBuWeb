@@ -7,13 +7,12 @@ import { footerItems } from '../nav.ts'
     <div class="flex justify-center w-full py-16 gap-8 lg:gap-24 text-white">
       <NuxtLink href="/" class="flex items-center justify-between text-lg flex gap-2">
         <img
-          src="/img/logo.svg"
+          src="/img/longlogo.png"
           alt="Logo"
           loading="eager"
-          width="28"
-          height="28"
+          width="100"
+          height="100"
         />
-        <span class="font-bold">DAIBU</span>
       </NuxtLink>
       <CTA/>
     </div>

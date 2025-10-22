@@ -14,8 +14,8 @@ const navItems = computed(() => route.path === '/privacy' ? [] : items)
           src="/img/longlogo.png"
           alt="Logo"
           loading="eager"
-          width="70"
-          height="7"
+          width="100"
+          height="100"
         />
         
       </NuxtLink>
