@@ -25,7 +25,7 @@ const src = '/img/hero_shape.svg'
         <template #name>
           Fonctionnalités
         </template>
-        Pourquoi choisir Daibu?
+        Pourquoi choisir DaiBu?
       </SectionTitle>
       <div v-for="(item, index) of features" class="flex flex-col lg:flex-row w-full justify-between xl:justify-around items-center gap-6 lg:gap-12">
         <div :class="['relative flex justify-around items-center', {'lg:order-1': index % 2 === 0 }]">

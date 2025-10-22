@@ -11,13 +11,13 @@ const navItems = computed(() => route.path === '/privacy' ? [] : items)
     <header class="flex justify-between items-center my-8 p-2 rounded-xl border border-white/10 bg-white/5 backdrop-blur-xl text-white">
       <NuxtLink href="/" class="flex items-center justify-between text-lg flex gap-2">
         <img
-          src="/img/logo.svg"
+          src="/img/longlogo.png"
           alt="Logo"
           loading="eager"
-          width="28"
-          height="28"
+          width="70"
+          height="7"
         />
-        <span class="font-bold">DAIBU</span>
+        
       </NuxtLink>
       <nav
         class="flex sm:block hidden"
