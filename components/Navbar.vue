@@ -1,42 +1,19 @@
 <script setup>
-import { items } from '../nav.ts'
-import { computed } from 'vue'
-
-const route = useRoute()
-const navItems = computed(() => route.path === '/privacy' ? [] : items)
 </script>
 
 <template>
   <Container>
-    <header class="flex justify-between items-center my-8 p-2 rounded-xl border border-white/10 bg-white/5 backdrop-blur-xl text-white">
-      <NuxtLink href="/" class="flex items-center justify-between text-lg flex gap-2">
+    <header class="flex justify-center md:justify-start items-center pt-10 pb-2 text-white">
+      <NuxtLink href="/" class="flex items-center text-lg gap-2 max-md:glass max-md:p-3 max-md:rounded-xl">
         <img
           src="/img/longlogo.png"
           alt="Logo"
           loading="eager"
-          width="100"
-          height="100"
+          width="160"
+          height="160"
+          class="max-md:w-32 max-md:h-auto"
         />
-        
       </NuxtLink>
-      <nav
-        class="flex sm:block hidden"
-      >
-        <ul class="flex gap-3">
-          <li v-for="item of navItems">
-            <NuxtLink
-              :href="item.path"
-              class="flex px-3 py-2 text-white/70 hover:text-white"
-            >
-              {{ item.title }}
-            </NuxtLink>
-          </li>
-        </ul>
-      </nav>
-      <div class="flex items-center gap-4">
-        <CTA/>
-        
-      </div>
     </header>
   </Container>
 </template>

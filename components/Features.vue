@@ -8,6 +8,13 @@ const features = [
     icon: "bx:bxs-analyse",
   },
   {
+    name: 'sub',
+    title: "Gérez vos abonnements",
+    description:
+      "Analysez la rentabilité de vos abonnements et identifiez ceux qui vous apportent le plus de valeur. Repérez facilement les services sous-utilisés ou inutiles pour réduire vos dépenses et tirer le meilleur parti de chaque abonnement.",
+    icon: "bx:bxs-credit-card",
+  },
+  {
     name: 'budget',
     title: "Une expérience sur mesure",
     description:
@@ -31,7 +38,7 @@ const src = '/img/hero_shape.svg'
         <div :class="['relative flex justify-around items-center', {'lg:order-1': index % 2 === 0 }]">
           <img
             :class="['absolute md:block hidden top-[20%] opacity-60', index % 2 ? 'left-[50%]' : 'right-[50%]']"
-            :src="`/img/feature_${item.name}_shape.svg`"
+            :src="item.name === 'sub' ? '/img/hero_shape.svg' : `/img/feature_${item.name}_shape.svg`"
             alt="feature shape"
             width="246"
             height="246"
