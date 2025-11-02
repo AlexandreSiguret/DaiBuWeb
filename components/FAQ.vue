@@ -51,7 +51,7 @@ function getColorClasses(index: number) {
         v-for="(item, index) of questions"
         class="p-4 lg:p-8 rounded-lg grid gap-2 text-center lg:text-left glass"
       >
-        <h3 class="font-extrabold text-2xl lg:text-3xl">{{ item.question }}</h3>
+        <h3 class="font-extrabold text-lg lg:text-xl">{{ item.question }}</h3>
         <p class="text-md lg:text-lg opacity-80 leading-relaxed">
           {{ item.answer }}
         </p>
