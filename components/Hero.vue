@@ -25,7 +25,7 @@ function resetTilt() {
   <main class="grid lg:grid-cols-2 place-items-center pt-8 pb-6 md:pt-0 md:-mt-16 lg:-mt-20 text-white">
     <div class="md:pl-24 max-md:text-center">
       <p class="text-xl lg:text-2xl text-accent font-medium mb-3 reveal-up reveal-up-1">
-        Prenez le controle de votre budget
+        Prenez <span class="text-white font-bold">VRAIMENT</span> le contrôle de votre budget
       </p>
       <h1 class="text-5xl lg:text-6xl xl:text-7xl font-extrabold lg:tracking-tight reveal-up reveal-up-1">
         <span class="text-white">
