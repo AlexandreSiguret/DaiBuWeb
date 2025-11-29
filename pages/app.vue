@@ -29,7 +29,19 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="min-h-screen flex items-center justify-center bg-white dark:bg-black">
-    <p class="text-gray-500">Redirection en cours...</p>
+  <div class="relative">
+    <div class="fixed top-4 right-4 z-50 bg-white/90 dark:bg-black/90 backdrop-blur px-4 py-2 rounded-full shadow-lg border border-gray-200 dark:border-gray-800">
+      <p class="text-sm font-medium text-gray-900 dark:text-white flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+        Redirection vers le store...
+      </p>
+    </div>
+    <Container>
+      <Hero></Hero>
+    </Container>
+    <Features></Features>
+    <Container>
+      <FAQ></FAQ>
+    </Container>
   </div>
 </template>
